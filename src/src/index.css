@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #D4AF37;
+  --color-gold-light: #F1D592;
+  --color-dark-bg: #050505;
+  --color-dark-surface: #121212;
+}
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-white font-sans antialiased;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+  .glass-gold {
+    @apply bg-gold/10 backdrop-blur-md border border-gold/20;
+  }
+  .gold-text-gradient {
+    @apply bg-linear-to-b from-gold-light to-gold bg-clip-text text-transparent;
+  }
+}
